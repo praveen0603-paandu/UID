@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking - Royal Route</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1a1a7c, #ff69b4);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #d32f2f;
+            color: white;
+            height: 80px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav button {
+            background-color: #0000cd;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav button:hover {
+            background-color: #00008b;
+        }
+
+        .booking-container {
+            margin-top: 100px;
+            background: white;
+            padding: 30px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-container h2 {
+            color: #d32f2f;
+        }
+
+        .booking-container input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .booking-container button {
+            background: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .booking-container button:hover {
+            background: #b71c1c;
+        }
+
+        footer {
+            background: #d32f2f;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            const from = document.getElementById("from").value.trim();
+            const to = document.getElementById("to").value.trim();
+            const date = document.getElementById("travel-date").value;
+            const trainClass = document.getElementById("train-class").value;
+
+            if (!from || !to || !date || !trainClass) {
+                alert("Please fill out all fields before booking.");
+                return false;
+            }
+
+            const selectedDate = new Date(date);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            if (selectedDate < today) {
+                alert("Please select a valid travel date (not in the past).");
+                return false;
+            }
+
+            window.location.href = "UID AVAILABEL TRAINS.html";
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 24px; margin: 0;">Royal Route</h1>
+        <nav>
+            <button><a href="UID HOMEPAGE.html">Home</a></button>
+            <button><a href="UID SERVICES.html">Services</a></button>
+            <button><a href="UID ABOUT US.html">About</a></button>
+            <button><a href="UID CONTACT US.html">Contact</a></button>
+        </nav>
+    </header>
+
+    <div class="booking-container">
+        <h2>Book Your Train Ticket</h2>
+        <form onsubmit="validateForm(event)">
+            <input type="text" id="from" placeholder="From" required>
+            <input type="text" id="to" placeholder="To" required>
+            <input type="date" id="travel-date" required>
+            <select id="train-class" required>
+                <option value="" disabled selected>Select Train Class</option>
+                <option value="First Class">First Class</option>
+                <option value="Second Class">Second Class</option>
+                <option value="Sleeper">Sleeper</option>
+            </select>
+            <button type="submit">Search Trains</button>
+        </form>
+    </div>
+
+    <footer>
+        <div>
+            <p>Royal Route Travels. Book your Happy Journey</p>
+        </div>
+    </footer>
+</body>
+</html>
