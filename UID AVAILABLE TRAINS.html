@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Trains - Royal Route</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1a1a7c, #ff69b4);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #d32f2f;
+            color: white;
+            height: 80px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav button {
+            background-color: #0000cd; /* Blue background */
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        nav a {
+            color: white; /* White font color */
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .booking-container {
+            margin-top: 50px;
+        }
+
+        .booking-container h2 {
+            color: white; /* White font for Available Trains */
+        }
+
+        .train-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .train-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .train-box input {
+            margin-right: 10px;
+        }
+
+        .book-now {
+            background: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .book-now:hover {
+            background: #b71c1c;
+        }
+
+        footer {
+            background: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function bookNow() {
+            let selectedTrain = document.querySelector('input[name="train"]:checked');
+            if (selectedTrain) {
+                alert("You have booked " + selectedTrain.value + " successfully!");
+                window.location.href = "UID THANK YOU.html";
+            } else {
+                alert("Please select a train before booking.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 24px; margin: 0;">Royal Route</h1>
+        <nav>
+            <button><a href="index.html">Home</a></button>
+            <button><a href="UID SERVICES.html">Services</a></button>
+            <button><a href="UID ABOUT US.html">About</a></button>
+            <button><a href="UID CONTACT US.html">Contact</a></button>
+        </nav>
+    </header>
+    
+    <div class="booking-container">
+        <h2>Available Trains</h2>
+    </div>
+    
+    <div class="train-options">
+        <div class="train-box">
+            <input type="radio" name="train" value="Train A">
+            <div>
+                <h3>Train A - ₹500</h3>
+            </div>
+        </div>
+        <div class="train-box">
+            <input type="radio" name="train" value="Train B">
+            <div>
+                <h3>Train B - ₹600</h3>
+            </div>
+        </div>
+        <div class="train-box">
+            <input type="radio" name="train" value="Train C">
+            <div>
+                <h3>Train C - ₹700</h3>
+            </div>
+        </div>
+    </div>
+    
+    <button class="book-now" onclick="bookNow()">Book Now</button>
+    
+    <footer>
+        <div>
+            <p>Royal Route Travels. Book your Happy Journey</p>
+        </div>
+    </footer>
+</body>
+</html>

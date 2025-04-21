@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Royal Route</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1a1a7c, #ff69b4);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #d32f2f; /* Red background for header */
+            color: white;
+            height: 80px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav button {
+            background-color: #0000cd; /* Blue background for buttons */
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav button:hover {
+            background-color: #00008b; /* Darker blue on hover */
+        }
+
+        .contact {
+            margin-top: 50px;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            flex-grow: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        footer {
+            background: #d32f2f; /* Red background for footer */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            position: relative;
+            margin-top: 50px;
+            box-sizing: border-box;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        /* For small screens like mobile */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+                padding: 10px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            nav button {
+                width: 100%;
+                padding: 12px 20px;
+            }
+
+            .contact {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+
+        /* For tablets and medium screens */
+        @media (max-width: 1024px) {
+            nav {
+                gap: 15px;
+            }
+
+            .contact {
+                font-size: 20px;
+            }
+
+            footer {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 24px; margin: 0;">Royal Route</h1>
+        <nav>
+            <button><a href="index.html">Home</a></button>
+            <button><a href="UID SERVICES.html">Services</a></button>
+            <button><a href="UID ABOUT US.html">About</a></button>
+            <button><a href="UID CONTACT US.html">Contact</a></button>
+        </nav>
+    </header>
+    
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <p>We are here to assist you with your travel needs. Get in touch with us through any of the following ways:</p>
+        <p><strong>Email:</strong> royalroute@gmail.com</p>
+        <p><strong>Phone:</strong> +91 6305832883</p>
+        <p><strong>Address:</strong> Srinagar Street, Hitech City, Hyderabad, India</p>
+        <p>Follow us on our social media for the latest updates and offers.</p>
+    </div>
+    
+    <footer>
+        <p>Royal Route Travels. Book your Happy Journey</p>
+    </footer>
+
+</body>
+</html>
